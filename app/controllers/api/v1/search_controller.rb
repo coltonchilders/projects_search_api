@@ -8,6 +8,7 @@ module Api
           search_name
         elsif params[:description]
           search_description
+        # Repeat the structure above and add corresponding methods to add more search routes
         else
           render json: {status: 'SUCCESS', message: "Please provide a valid search parameter"}, status: :ok
         end
@@ -55,6 +56,14 @@ module Api
             return false
           end
         end
+
+        if params[:filters].has_key?("Project Phase Planned End Date")
+          if project["Project Phase Planned End Date"] != params[:filters]["Project Phase Planned End Date"]
+            return false
+          end
+        end
+
+        # Repeat the structure above to add more filters
 
         return true
       end
