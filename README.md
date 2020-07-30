@@ -1,5 +1,5 @@
 # RESERVATION SERVICE
-This is an API service to manage customer information, vehicle information, and reservation information.
+This is an API service to search for projects.
 
 ## Ruby Version
 2.6.3
